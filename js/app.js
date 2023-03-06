@@ -14,4 +14,10 @@ const displayTemperature = data =>{
     temperature.innerText = data.main.temp;
 }
 
+document.getElementById('btn-search').addEventListener('click',function(){
+    const searchField = document.getElementById('search-field');
+    const city = searchField.value;
+    loadTemperature(city);
+})
+
 loadTemperature('dhaka')
